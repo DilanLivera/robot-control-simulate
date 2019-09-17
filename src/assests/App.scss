@@ -1,0 +1,48 @@
+.App {
+  height: 100vh;;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .Board {
+    table {
+      border: 1px solid black;
+
+      .robot {
+        font-size: 35px;
+        color: green;
+      }
+
+      .robo-container {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  
+    td {
+      border: 1px solid black;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Key {
+    font-size: 30px;
+    margin: 3px 6px;
+  }
+
+  .powerOn {
+    color: red;
+  }
+
+  .powerOff {
+    color: deepskyblue;
+  }
+}
+
