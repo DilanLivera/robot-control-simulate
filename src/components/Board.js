@@ -98,14 +98,20 @@ class Board extends Component {
             { this.buildTable() }
           </tbody>
         </table>
-        <div className="controls">
-          <Key icon="fa fa-arrow-up" onClick={ this.handleClick.bind(this, "up") } />
-          <div>
-            <Key icon="fa fa-arrow-left" onClick={ this.handleClick.bind(this, "left") } />
-            <Key icon={ `fa fa-power-off ${(!this.state.powerOn) ? "powerOn" : "powerOff"}`} onClick={ this.handlePowerClick } /> 
-            <Key icon="fa fa-arrow-right" onClick={ this.handleClick.bind(this, "right") } />     
+        <hr />
+        <div className="keys-container">
+          <div className="control-keys">
+            <Key icon="fa fa-arrow-up" onClick={ this.handleClick.bind(this, "up") } />
+            <div>
+              <Key icon="fa fa-arrow-left" onClick={ this.handleClick.bind(this, "left") } />
+              <Key icon={ "fa fa-stop"} /> 
+              <Key icon="fa fa-arrow-right" onClick={ this.handleClick.bind(this, "right") } />     
+            </div>
+            <Key icon="fa fa-arrow-down" onClick={ this.handleClick.bind(this, "down") } />  
           </div>
-          <Key icon="fa fa-arrow-down" onClick={ this.handleClick.bind(this, "down") } />              
+          <div className="power-key">
+            <Key icon={ `fa fa-power-off power ${(!this.state.powerOn) ? "powerOn" : "powerOff"}`} onClick={ this.handlePowerClick } />  
+          </div>          
         </div>
       </div>
     );

@@ -3,13 +3,26 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: LightSlateGrey;
 
   .Board {
+    border: 4px solid brown;
+    padding: 4px;
+    border-radius: 5px;
+    background-color: white;
+
+    hr {
+      border: 0;
+      height: 0;
+      border-top: 3px solid brown;
+    }
+
     table {
-      border: 1px solid black;
+      border-collapse: collapse;
+      background-color: Gainsboro;
 
       .robot {
-        font-size: 35px;
+        font-size: 40px;
         color: green;
       }
 
@@ -20,29 +33,45 @@
     }
   
     td {
-      border: 1px solid black;
-      width: 50px;
-      height: 50px;
+      border: 1px solid lightgray;
+      width: 70px;
+      height: 70px;
     }
   }
 
-  .controls {
+  .keys-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    justify-content: space-between;
+    padding: 10px 40px 10px 80px;
+    background-color: DodgerBlue;
 
-  .Key {
-    font-size: 30px;
-    margin: 3px 6px;
-  }
+    .control-keys {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: dimgray;
+    }
 
-  .powerOn {
-    color: red;
-  }
-
-  .powerOff {
-    color: deepskyblue;
+    .power-key {
+      background-color: none;
+    }
+  
+    .Key {
+      font-size: 30px;
+      padding: 0 4px 3px;
+      border: 1px solid black;
+      background-color: black;
+      border-radius: 3px;
+  
+    }
+  
+    .powerOn {
+      color: tomato;
+    }
+  
+    .powerOff {
+      color: deepskyblue;
+    }
   }
 }
 

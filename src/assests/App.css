@@ -8,14 +8,29 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: LightSlateGrey;
+}
+
+.App .Board {
+  border: 4px solid brown;
+  padding: 4px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.App .Board hr {
+  border: 0;
+  height: 0;
+  border-top: 3px solid brown;
 }
 
 .App .Board table {
-  border: 1px solid black;
+  border-collapse: collapse;
+  background-color: Gainsboro;
 }
 
 .App .Board table .robot {
-  font-size: 35px;
+  font-size: 40px;
   color: green;
 }
 
@@ -29,12 +44,23 @@
 }
 
 .App .Board td {
-  border: 1px solid black;
-  width: 50px;
-  height: 50px;
+  border: 1px solid lightgray;
+  width: 70px;
+  height: 70px;
 }
 
-.App .controls {
+.App .keys-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 40px 10px 80px;
+  background-color: DodgerBlue;
+}
+
+.App .keys-container .control-keys {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,18 +71,26 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: dimgray;
 }
 
-.App .Key {
+.App .keys-container .power-key {
+  background-color: none;
+}
+
+.App .keys-container .Key {
   font-size: 30px;
-  margin: 3px 6px;
+  padding: 0 4px 3px;
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 3px;
 }
 
-.App .powerOn {
-  color: red;
+.App .keys-container .powerOn {
+  color: tomato;
 }
 
-.App .powerOff {
+.App .keys-container .powerOff {
   color: deepskyblue;
 }
 /*# sourceMappingURL=App.css.map */
