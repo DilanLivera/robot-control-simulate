@@ -85,6 +85,10 @@
   border-radius: 3px;
 }
 
+.App .keys-container .Key > i:not([class="fa fa-stop"]):hover {
+  opacity: 0.5;
+}
+
 .App .keys-container .powerOn {
   color: tomato;
 }

@@ -14,6 +14,16 @@ class Board extends Component {
       powerOn: false
     }
     this.handlePowerClick = this.handlePowerClick.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+  }
+
+  /* attach key press event handlers */
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKeyPress);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeyPress);
   }
 
   /* create the board using props */
@@ -88,6 +98,14 @@ class Board extends Component {
   handlePowerClick() {
     const powerOn = !this.state.powerOn;
     this.setState({ ...this.state, powerOn });
+  }
+
+  /* event handler for arrow key press*/
+  handleKeyPress(evt) {
+    if(evt.keyCode === 38) this.handleClick("up");
+    if(evt.keyCode === 40) this.handleClick("down");
+    if(evt.keyCode === 37) this.handleClick("left");
+    if(evt.keyCode === 39) this.handleClick("right");
   }
 
   render() {
