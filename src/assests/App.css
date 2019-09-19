@@ -26,12 +26,12 @@
 
 .App .Board table {
   border-collapse: collapse;
-  background-color: Gainsboro;
+  background-color: MediumSeaGreen;
 }
 
 .App .Board table .robot {
   font-size: 40px;
-  color: green;
+  color: DarkSlateBlue;
 }
 
 .App .Board table .robo-container {
@@ -44,7 +44,6 @@
 }
 
 .App .Board td {
-  border: 1px solid lightgray;
   width: 70px;
   height: 70px;
 }
